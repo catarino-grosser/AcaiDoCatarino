@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Açaí do Catarino — Praia do Siriú, Garopaba/SC</title>
+  <meta name="description" content="Açaí do Catarino: o carrinho de açaí da Praia do Siriú, em Garopaba/SC. Cardápio, localização e dicas da praia mais extensa de Garopaba.">
+
+  <!-- Favicon simples em SVG (uma tigela roxa) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%237A2E8C'/%3E%3Cpath d='M14 30c3 10 9 16 18 16s15-6 18-16' stroke='%23F7EEDA' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Fontes: Fredoka (títulos, clima de placa de praia) + Nunito Sans (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== MENU / CABEÇALHO ===================== -->
+  <header class="topo">
+    <div class="topo-conteudo">
+      <a href="#inicio" class="marca">
+        <span class="marca-icone" aria-hidden="true">🍇</span>
+        <span class="marca-texto">Açaí do <em>Catarino</em></span>
+      </a>
+
+      <button class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menuNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu-nav" id="menuNav">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#praia">A praia</a>
+        <a href="#sobre">O Catarino</a>
+        <a href="#localizacao">Onde estamos</a>
+        <a href="#contato" class="menu-nav-cta">Chamar no Zap</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-conteudo">
+        <p class="etiqueta">📍 Praia do Siriú · Garopaba/SC</p>
+        <h1>Açaí do <em>Catarino</em></h1>
+        <p class="hero-frase">Açaí geladinho, feito na hora, com os pés na areia mais comprida de Garopaba.</p>
+
+        <div class="hero-botoes">
+          <a href="https://wa.me/5548988662824?text=Oi%2C%20Catarino!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20a%C3%A7a%C3%AD%20%F0%9F%8D%87" class="botao botao-principal" target="_blank" rel="noopener">
+            Chamar no WhatsApp
+          </a>
+          <a href="#localizacao" class="botao botao-fantasma">Ver onde encontrar</a>
+        </div>
+      </div>
+
+      <!-- Ilustração da tigela de açaí em SVG (sem depender de fotos) -->
+      <div class="hero-ilustracao" aria-hidden="true">
+        <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="160" cy="270" rx="120" ry="18" fill="#241226" opacity="0.15"/>
+          <path d="M40 150c0-8 6-14 14-14h212c8 0 14 6 14 14 0 66-54 120-120 120S40 216 40 150z" fill="#F7EEDA"/>
+          <path d="M55 150c0-6 5-10 10-10h190c5 0 10 4 10 10 0 58-47 105-105 105S55 208 55 150z" fill="#7A2E8C"/>
+          <path d="M70 140c30 10 150 10 180 0" stroke="#5C1F6B" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="110" cy="120" r="16" fill="#FFDD8A"/>
+          <circle cx="150" cy="108" r="14" fill="#FFDD8A"/>
+          <circle cx="195" cy="116" r="15" fill="#FFDD8A"/>
+          <path d="M215 100c8-14 26-14 30 2 3 12-9 20-22 20-3-8-8-16-8-22z" fill="#E4536B"/>
+          <g fill="#5C3A21">
+            <circle cx="95" cy="150" r="4"/>
+            <circle cx="120" cy="160" r="3.5"/>
+            <circle cx="145" cy="145" r="4"/>
+            <circle cx="175" cy="158" r="3.5"/>
+            <circle cx="205" cy="148" r="4"/>
+            <circle cx="230" cy="160" r="3.5"/>
+          </g>
+          <path d="M75 128c20 16 150 16 170-2" stroke="#FFB55E" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Divisor: onda "aberta" — representa o mar do Siriú -->
+      <svg class="onda onda-aberta" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C180,110 360,0 540,50 C720,100 900,10 1080,45 C1260,80 1350,20 1440,55 L1440,110 L0,110 Z" fill="#F7EEDA"/>
+      </svg>
+    </section>
+
+    <!-- ===================== CARDÁPIO ===================== -->
+    <section id="cardapio" class="cardapio">
+      <p class="etiqueta etiqueta-clara">Cardápio</p>
+      <h2>Do jeito que você gosta</h2>
+      <p class="secao-intro">Açaí puro, batido na hora, com fruta, complemento e cobertura à sua escolha.</p>
+
+      <div class="cardapio-grade">
+        <article class="copo-card">
+          <p class="copo-tamanho">200ml</p>
+          <p class="copo-preco">R$ 20</p>
+          <p class="copo-desc">1 fruta, 1 complemento e 1 cobertura à sua escolha. Granola grátis.</p>
+        </article>
+        <article class="copo-card copo-card-destaque">
+          <p class="copo-tamanho">300ml</p>
+          <p class="copo-preco">R$ 25</p>
+          <p class="copo-desc">1 fruta, 1 complemento e 1 cobertura à sua escolha. Granola grátis.</p>
+        </article>
+        <article class="copo-card">
+          <p class="copo-tamanho">400ml</p>
+          <p class="copo-preco">R$ 30</p>
+          <p class="copo-desc">2 frutas, 2 complementos e 1 cobertura à sua escolha. Granola grátis.</p>
+        </article>
+      </div>
+
+      <div class="coberturas">
+        <h3>Monte o seu</h3>
+
+        <p class="coberturas-grupo">Frutas</p>
+        <ul class="coberturas-lista">
+          <li>🍓 Morango</li>
+          <li>🍌 Banana</li>
+        </ul>
+
+        <p class="coberturas-grupo">Complementos</p>
+        <ul class="coberturas-lista">
+          <li>🥛 Leite em pó</li>
+          <li>🥜 Paçoca</li>
+          <li>🍫 Nutella</li>
+          <li>🍬 Confetes</li>
+        </ul>
+
+        <p class="coberturas-grupo">Coberturas</p>
+        <ul class="coberturas-lista">
+          <li>🍯 Caramelo</li>
+          <li>🍫 Chocolate</li>
+          <li>🥛 Leite condensado</li>
+        </ul>
+
+        <p class="coberturas-obs">🥣 Granola é por nossa conta, em todos os tamanhos.</p>
+      </div>
+    </section>
+
+    <!-- ===================== A PRAIA DO SIRIÚ ===================== -->
+    <section id="praia" class="praia">
+      <div class="praia-conteudo">
+        <p class="etiqueta etiqueta-clara">A praia</p>
+        <h2>Você está na maior praia de Garopaba</h2>
+        <p class="secao-intro">
+          A Praia do Siriú tem cerca de 4 km de areia — a mais extensa do município — entre dunas
+          que passam dos 30 metros de altura e a tranquila Lagoa do Macacu. É mar aberto pra quem
+          gosta de onda, lagoa calma pra quem quer sossego, e dunas pra descer de sandboard antes
+          (ou depois) do açaí.
+        </p>
+
+        <div class="praia-fatos">
+          <div class="fato">
+            <span class="fato-numero">4 km</span>
+            <span class="fato-legenda">de areia, a maior praia da cidade</span>
+          </div>
+          <div class="fato">
+            <span class="fato-numero">+30 m</span>
+            <span class="fato-legenda">de altura nas dunas do Siriú</span>
+          </div>
+          <div class="fato">
+            <span class="fato-numero">jul–nov</span>
+            <span class="fato-legenda">temporada de baleias francas na região</span>
+          </div>
+        </div>
+
+        <ul class="praia-lista">
+          <li><strong>Dunas:</strong> subida a pé e descida de sandboard, aluguel de prancha na região.</li>
+          <li><strong>Lagoa do Macacu:</strong> água calma, boa para caiaque, stand-up paddle e crianças.</li>
+          <li><strong>Surfe:</strong> mar aberto com boas ondas em dias de vento sul.</li>
+          <li><strong>Nascer do sol:</strong> o canto Norte da praia, perto do costão, é o ponto mais bonito.</li>
+        </ul>
+      </div>
+
+      <!-- Divisor: onda "calma" — representa a lagoa -->
+      <svg class="onda onda-calma" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,55 C360,10 1080,100 1440,45 L1440,100 L0,100 Z" fill="#F7EEDA"/>
+      </svg>
+    </section>
+
+    <!-- ===================== SOBRE O CATARINO ===================== -->
+    <section id="sobre" class="sobre">
+      <div class="sobre-caixa">
+        <p class="etiqueta">Quem faz</p>
+        <h2>O Catarino</h2>
+        <p>
+          <!-- EDITAR: troque este texto pela história real do Catarino -->
+          Todo santo dia de verão, o carrinho do Catarino tá plantado na areia do Siriú, batendo
+          açaí pra quem chega da praia, da duna ou da lagoa. Simples assim: fruta boa, cobertura
+          generosa e aquele papo de praia enquanto a colher não chega.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== LOCALIZAÇÃO ===================== -->
+    <section id="localizacao" class="localizacao">
+      <p class="etiqueta etiqueta-clara">Onde estamos</p>
+      <h2>Encontre o carrinho</h2>
+
+      <div class="localizacao-grade">
+        <div class="localizacao-info">
+          <p>
+            <!-- EDITAR: descreva o ponto exato do carrinho na praia -->
+            📍 Praia do Siriú, próximo ao acesso das dunas, Garopaba/SC.
+          </p>
+          <p class="horario-titulo">Horário de funcionamento</p>
+          <ul class="horario-lista">
+            <!-- EDITAR: ajuste os horários reais -->
+            <li><span>Segunda a sexta</span><span>10h – 18h</span></li>
+            <li><span>Sábado e domingo</span><span>9h – 19h</span></li>
+          </ul>
+          <p class="horario-obs">Horário de verão. No inverno, confirme pelo WhatsApp antes de vir. <!-- EDITAR --></p>
+        </div>
+
+        <div class="localizacao-mapa">
+          <iframe
+            title="Mapa da Praia do Siriú, Garopaba"
+            src="https://www.google.com/maps?q=Praia%20do%20Siri%C3%BA%2C%20Garopaba%20-%20SC&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ / CONTATO ===================== -->
+  <footer id="contato" class="rodape">
+    <p class="rodape-marca">Açaí do <em>Catarino</em></p>
+    <p class="rodape-frase">Feito com carinho na areia da Praia do Siriú 🌊</p>
+
+    <div class="rodape-links">
+      <a href="https://wa.me/5548988662824" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+    <p class="rodape-copy">© <span id="anoAtual"></span> Açaí do Catarino — Garopaba/SC</p>
+  </footer>
+
+  <!-- ===================== BARRA FIXA (SÓ CELULAR) ===================== -->
+  <div class="barra-fixa">
+    <a href="https://wa.me/5548988662824" target="_blank" rel="noopener" class="barra-botao barra-zap">💬 WhatsApp</a>
+    <a href="#localizacao" class="barra-botao barra-mapa">📍 Como chegar</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
